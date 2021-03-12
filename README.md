@@ -40,6 +40,8 @@ I depoly the smart home server on my router:
 
 ### Set Parameter
 
+BTW, it is not a good idea to set parameter directly into source code. I will optimize it later.
+
 1. Go to smart-home-server/main.cpp
 ```
 //TODO: Put your air condition ip address here
