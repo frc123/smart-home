@@ -106,6 +106,7 @@ Security policy relies on firewall of the router
 - [kokke/tiny-AES-c](https://github.com/kokke/tiny-AES-c)
 - [Sqlite3](https://www.sqlite.org/)
 - [amazeUI](https://amazeui.shopxo.net/)
+- [jquery](https://jquery.com/)
 
 ## Statement
 We do not assume any responsibility
