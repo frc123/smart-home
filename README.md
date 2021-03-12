@@ -98,6 +98,16 @@ Security policy relies on firewall of the router
 - smart-home-server
 	Back End
 
+## Secondary Develop Guide
+
+For more Mi Home device, you may develop them based on smart-home-server/mi-home-device.*
+
+[Mi Home Device Protocal Documentaion](https://iot.mi.com/new/doc/design/spec/overall) will be helpful.
+
+You may treat smart-home-server as a core of furniture to develop (at least I do so).
+
+I will make a new repository for mi home c++ protocol with a guide/documentation later.
+
 ## Library
 
 - [Tencent/rapidjson](https://www.runoob.com)
