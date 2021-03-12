@@ -66,7 +66,7 @@ $address = 'http://127.0.0.1:12345/smart-home-api';
 
 1. Get the cross compiler in openwrt developer tools
 
-https://openwrt.org/
+[openwrt developer guide](https://openwrt.org/docs/guide-developer/start)
 
 2. Compile back up part
 
