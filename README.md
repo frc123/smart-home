@@ -101,6 +101,7 @@ Security policy relies on firewall of the router
 ## Library
 
 - [Tencent/rapidjson](https://www.runoob.com)
+- [EZLippi/Tinyhttpd](https://github.com/EZLippi/Tinyhttpd)
 - [JieweiWei/md5](https://github.com/JieweiWei/md5)
 - [kokke/tiny-AES-c](https://github.com/kokke/tiny-AES-c)
 - [Sqlite3](https://www.sqlite.org/)
