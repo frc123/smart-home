@@ -1,0 +1,25 @@
+
+601: socket (UdpServer) create fail
+void UdpServer::Create(void)
+
+602: socket (UdpServer) bind fail
+void UdpServer::Bind(void)
+
+603: socket (UdpServer) receive fail
+void UdpServer::StartReceive(char* recv_buf, u_int32_t recv_buf_size, OnReceiveCallbackFunc callback_func)
+
+604: socket (UdpClient) create fail
+int UdpClient::Create(void)
+
+605: socket (UdpClient) send fail
+int UdpClient::SendOne(char* send_buf)
+
+606: socket (UdpClient) receive fail
+int UdpClient::RecvOne(char* recv_buf)
+
+607: socket (TcpServer) create fail
+void UdpServer::Create(void)
+
+611: sqlite3 open fail
+Sqlite3Conn::Sqlite3Conn(char* filename)
+

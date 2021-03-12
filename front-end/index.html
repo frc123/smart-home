@@ -1,0 +1,448 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Smart Home</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<header class="am-topbar am-topbar-inverse admin-header">
+  <div class="am-topbar-brand">
+    <strong>Smart Home</strong> <small>Control Panel Frame</small>
+  </div>
+</header>
+
+  <!-- content start -->
+<div class="admin-content">
+	<div id="alert-area"></div>
+    <div class="admin-content-body">
+	  <div class="am-cf am-padding">
+        <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">Home</strong> / <small>Smart Home</small></div>
+      </div>
+	  
+    <hr>
+
+    <div class="am-tabs am-margin" data-am-tabs>
+      <ul class="am-tabs-nav am-nav am-nav-tabs">
+        <li class="am-active"><a href="#tab1">Door</a></li>
+        <li><a href="#tab2">Air Condition</a></li>
+      </ul>
+
+      <div class="am-tabs-bd">
+	  
+        <div class="am-tab-panel am-fade am-in am-active" id="tab1">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-4 am-u-md-2 am-text-right">远程开门</div>
+		    <button type="button" class="am-btn am-btn-primary am-btn-xs sha-call sha-valuefromattr" id="door-remote-open"
+			sha-device="1" sha-action="1">
+			开门
+			</button>
+          </div>
+		  <br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+        <div class="am-tab-panel am-fade" id="tab2">
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">室内温度</div>
+			<div class="am-u-sm-8 am-u-md-10">
+				<div id="ac-temperature"></div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">运行时长</div>
+			<div class="am-u-sm-8 am-u-md-10">
+				<div id="ac-duration"></div>小时
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">电源</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-power-1"
+				  sha-device="2" sha-action="4" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-power-0"
+				  sha-device="2" sha-action="4" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">模式</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-mode-2"
+				  sha-device="2" sha-action="5" sha-value1="2">
+				  <input type="radio"> 制冷
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-mode-3"
+				  sha-device="2" sha-action="5" sha-value1="3">
+				  <input type="radio"> 抽湿
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-mode-4"
+				  sha-device="2" sha-action="5" sha-value1="4">
+				  <input type="radio"> 送风
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-mode-5"
+				  sha-device="2" sha-action="5" sha-value1="5">
+				  <input type="radio"> 制热
+				</label>
+			  </div>
+			</div>
+		  </div>
+			<div class="am-g am-margin-top am-form">
+			  <div class="am-u-sm-4 am-u-md-2 am-text-right">
+				设定温度
+			  </div>
+			  <div class="am-u-sm-8 am-u-md-4">
+				<input type="text" class="am-input-sm sha-call sha-valuefromspecial sha-callfromfocusout" 
+				id="ac-target-temperature"
+				sha-device="2" sha-action="6">
+			  </div>
+			</div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">风速</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-0"
+				  sha-device="2" sha-action="11" sha-value1="0">
+				  <input type="radio"> 自动
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-1"
+				  sha-device="2" sha-action="11" sha-value1="1">
+				  <input type="radio"> 1
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-2"
+				  sha-device="2" sha-action="11" sha-value1="2">
+				  <input type="radio"> 2
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-3"
+				  sha-device="2" sha-action="11" sha-value1="3">
+				  <input type="radio"> 3
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-4"
+				  sha-device="2" sha-action="11" sha-value1="4">
+				  <input type="radio"> 4
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-5"
+				  sha-device="2" sha-action="11" sha-value1="5">
+				  <input type="radio"> 5
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-6"
+				  sha-device="2" sha-action="11" sha-value1="6">
+				  <input type="radio"> 6
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-fanspeed-7"
+				  sha-device="2" sha-action="11" sha-value1="7">
+				  <input type="radio"> 7
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">节能</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-eco-1"
+				  sha-device="2" sha-action="7" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-eco-0"
+				  sha-device="2" sha-action="7" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">辅热</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-heater-1"
+				  sha-device="2" sha-action="8" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-heater-0"
+				  sha-device="2" sha-action="8" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">干燥</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-dryer-1"
+				  sha-device="2" sha-action="9" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-dryer-0"
+				  sha-device="2" sha-action="9" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>		  
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">睡眠</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-sleep-1"
+				  sha-device="2" sha-action="10" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-sleep-0"
+				  sha-device="2" sha-action="10" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">扫风</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-vertical-swing-1"
+				  sha-device="2" sha-action="12" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-vertical-swing-0"
+				  sha-device="2" sha-action="12" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">蜂鸣器</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-buzzer-1"
+				  sha-device="2" sha-action="13" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-buzzer-0"
+				  sha-device="2" sha-action="13" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">灯光</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-led-1"
+				  sha-device="2" sha-action="14" sha-value1="1">
+				  <input type="radio"> 开
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="ac-led-0"
+				  sha-device="2" sha-action="14" sha-value1="0">
+				  <input type="radio"> 关
+				</label>
+			  </div>
+			</div>
+		  </div>
+			<div class="am-g am-margin-top am-form">
+			  <div class="am-u-sm-4 am-u-md-2 am-text-right">
+				定时
+			  </div>
+			  <div class="am-u-sm-8 am-u-md-4">
+				<input type="text" class="am-input-sm sha-call sha-valuefromspecial sha-callfromfocusout" 
+				id="ac-timer-minutes"
+				sha-device="2" sha-action="16">分钟
+			  </div>
+			</div>
+
+        </div>
+
+
+      </div>
+    </div>	  
+	  
+	  
+	
+	</div>
+</div>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script>
+function alertInsert(status, text)
+{
+	$("#alert-area").append("<div class=\"am-alert am-alert-" + status + "\" data-am-alert>"
+		+ "<button type=\"button\" class=\"am-close\">&times;</button><p>" + text
+		+ "</p></div>");
+}
+var parsedJsonAirconditionGetAllPropertiesResult;
+function airconditionGetAllProperties()
+{
+	var progress = $.AMUI.progress;
+	progress.start();
+	$.ajax({
+		url:"./smart-home-api.php",
+		type:"GET",
+		data:
+		{
+			device:"2",
+			action:"1"
+		},
+		success: function (data,status)
+		{
+			var ret_json = $.parseJSON(data);
+			if(ret_json.code != 0)
+			{
+				alertInsert("warning", "aircondition properties retrieval failed "
+					+ "(code: " + ret_json.code + ")");
+			}
+			var ret_json_res = ret_json.result;
+			parsedJsonAirconditionGetAllPropertiesResult = ret_json_res;
+			$("#ac-temperature").html(ret_json_res.temperature);
+			$("#ac-duration").html(ret_json_res.running_duration);
+			$("#ac-power-" + ret_json_res.power).addClass("am-active");
+			$("#ac-mode-" + ret_json_res.mode).addClass("am-active");
+			$("#ac-fanspeed-" + ret_json_res.fan_speed).addClass("am-active");
+			$("#ac-eco-" + ret_json_res.eco).addClass("am-active");
+			$("#ac-heater-" + ret_json_res.heater).addClass("am-active");
+			$("#ac-dryer-" + ret_json_res.dryer).addClass("am-active");
+			$("#ac-sleep-" + ret_json_res.sleep_mode).addClass("am-active");
+			$("#ac-vertical-swing-" + ret_json_res.vertical_swing).addClass("am-active");
+			$("#ac-buzzer-" + ret_json_res.buzzer).addClass("am-active");
+			$("#ac-led-" + ret_json_res.led).addClass("am-active");
+			$("#ac-target-temperature").val(ret_json_res.target_temperature);
+			$("#ac-timer-minutes").val(ret_json_res.timer_minutes_remain);	
+			progress.done();
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			alertInsert("warning", "aircondition properties retrieval failed "
+				+ "(httpErrorThrown: " + errorThrown + ")");
+			progress.done();
+		}
+	});
+}
+$(".sha-call.sha-valuefromattr").click(function(){
+	var progress = $.AMUI.progress;
+	progress.start();
+	$.ajax({
+		url:"./smart-home-api.php",
+		type:"GET",
+		data:
+		{
+			device:$(this).attr("sha-device"),
+			action:$(this).attr("sha-action"),
+			value1:$(this).attr("sha-value1"),
+			value2:$(this).attr("sha-value2")
+		},
+		success: function (data,status)
+		{
+			var ret_json = $.parseJSON(data);
+			if(ret_json.code != 0)
+			{
+				alertInsert("warning", ".sha-call.sha-valuefromattr failed "
+					+ "(code: " + ret_json.code + ")");
+			}
+			progress.done();
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			alertInsert("warning", ".sha-call.sha-valuefromattr failed "
+				+ "(httpErrorThrown: " + errorThrown + ")");
+			progress.done();
+		}
+	});
+});
+$(".sha-call.sha-valuefromspecial.sha-callfromfocusout").focusout(function(){
+	var progress = $.AMUI.progress;
+	progress.start();
+	var thisVal = $(this).val();
+	var value1 = 0;
+	var value2 = 0;
+	switch($(this).attr("id"))
+	{
+		case "ac-target-temperature":
+			value1 = parseInt(thisVal);
+			if(value1 != thisVal)
+				value2 = 1;
+			break;
+		case "ac-timer-minutes":
+			value1 = thisVal;
+			if(parsedJsonAirconditionGetAllPropertiesResult.power == 0)
+				value2 = 1;
+			break;
+	}
+	$.ajax({
+		url:"./smart-home-api.php",
+		type:"GET",
+		data:
+		{
+			device:$(this).attr("sha-device"),
+			action:$(this).attr("sha-action"),
+			value1:value1,
+			value2:value2
+		},
+		success: function (data,status)
+		{
+			var ret_json = $.parseJSON(data);
+			if(ret_json.code != 0)
+			{
+				alertInsert("warning", ".sha-call.sha-valuefromspecial.sha-callfromfocusout failed "
+					+ "(code: " + ret_json.code + ")");
+			}
+			progress.done();
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			alertInsert("warning", ".sha-call.sha-valuefromspecial.sha-callfromfocusout failed "
+				+ "(httpErrorThrown: " + errorThrown + ")");
+			progress.done();
+		}
+	});
+});
+$(document).ready(function(){
+	airconditionGetAllProperties();
+});
+
+</script>
+</body>
+</html>
