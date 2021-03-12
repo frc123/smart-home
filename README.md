@@ -12,6 +12,11 @@ Document is updating.
 
 You may carry out secondary development to apply to your furniture.
 
+## Demo
+
+![front-end-door-img](https://github.com/frc123/smart-home/blob/master/demo-img/door.png)
+![front-end-aircondition-img](https://github.com/frc123/smart-home/blob/master/demo-img/air-condition.png)
+
 ## Realized furniture
 
 - Air Condition
