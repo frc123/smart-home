@@ -89,21 +89,24 @@ make type=openwrt
 ```
 smart-home-server
 ```
-Maybe you want to use linux screen
+也许你可以使用screen来进行后台运行
 
-5. Set the front-end into a http server such as nginx/apache/etc.
+5. 将前端部署在http服务器上，例如 nginx/apache 等.
 
-### Security
+### 安全
 
-Security policy relies on firewall of the router.
-Plan to release the account system in the next version.
+通过路由器防火墙策略来实现。
 
-## Code Structure
+计划将会在下个版本中完成账户系统。
+
+## 代码结构
+
+（待完善）
 
 - front-end
-	Front End
+	前端
 - smart-home-server
-	Back End
+	后端
 
 ## 二次开发
 

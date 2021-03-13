@@ -96,9 +96,12 @@ Maybe you want to use linux screen
 ### Security
 
 Security policy relies on firewall of the router.
-Plan to release the account system in the next version.
+
+Planning to do the account system in the next version.
 
 ## Code Structure
+
+(To be perfected)
 
 - front-end
 	Front End
