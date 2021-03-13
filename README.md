@@ -2,6 +2,7 @@
 
 [Chinese Version 中文版](https://github.com/frc123/smart-home/blob/master/README.zh-CN.md)
 
+
 ***
 
 This is my smart home solution. 
@@ -15,6 +16,10 @@ Welcome to contribute it.
 Document is updating. 
 
 You may carry out secondary development to apply to your furniture.
+
+***
+
+If you want to learn more about or want to contribute *mi home protocal c++ implementation*, you might go to [miio-cpp](https://github.com/frc123/miio-cpp).
 
 ## Demo
 

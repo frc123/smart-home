@@ -16,6 +16,10 @@
 
 您可以根据您的家具进行二次开发。
 
+***
+
+如果您想要了解更多关于或想要贡献*米家协议C++实现*，您可以前往[miio-cpp](https://github.com/frc123/miio-cpp)。
+
 ## Demo
 
 ![front-end-door-img](https://github.com/frc123/smart-home/blob/master/demo-img/door.png)
