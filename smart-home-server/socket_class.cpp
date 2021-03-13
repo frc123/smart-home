@@ -13,16 +13,14 @@ void UdpServer::Create(void)
 
 void UdpServer::FillStructSockaddr(u_int16_t port)
 {
-    memset(&addr_serv_, 0, sizeof(struct sockaddr_in));//每个字节都用0填充
-    addr_serv_.sin_family = AF_INET;//使用IPV4地址
-    addr_serv_.sin_port = htons(port);//端口
-    /* INADDR_ANY表示不管是哪个网卡接收到数据，只要目的端口是SERV_PORT，就会被该应用程序接收到 */
-    addr_serv_.sin_addr.s_addr = htonl(INADDR_ANY); //自动获取IP地址
+    memset(&addr_serv_, 0, sizeof(struct sockaddr_in));
+    addr_serv_.sin_family = AF_INET;
+    addr_serv_.sin_port = htons(port);
+    addr_serv_.sin_addr.s_addr = htonl(INADDR_ANY);
 }
 
 void UdpServer::Bind(void)
 {
-    /* 绑定socket */
     if (bind(sock_fd_, (struct sockaddr*) & addr_serv_, sizeof(addr_serv_)) < 0)
     {
         ErrorThrow(602, "socket (UdpServer) bind fail");
