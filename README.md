@@ -1,6 +1,8 @@
 # Smart Home
 
-[Chinese Version 中文版](https://github.com/frc123/smart-home/README.zh-CN.md)
+[Chinese Version 中文版](https://github.com/frc123/smart-home/blob/master/README.zh-CN.md)
+
+***
 
 This is my smart home solution. 
 

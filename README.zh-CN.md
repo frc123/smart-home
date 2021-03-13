@@ -1,6 +1,6 @@
 # Smart Home
 
-[English Version 英文版](https://github.com/frc123/smart-home/README.md)
+[English Version 英文版](https://github.com/frc123/smart-home/blob/master/README.md)
 
 这是我的智能家具解决方案。
 
