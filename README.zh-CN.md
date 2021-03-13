@@ -2,6 +2,8 @@
 
 [English Version 英文版](https://github.com/frc123/smart-home/blob/master/README.md)
 
+***
+
 这是我的智能家具解决方案。
 
 服务器部分会部署在OpenWrt固件的路由器上。
