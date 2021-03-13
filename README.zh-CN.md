@@ -114,7 +114,7 @@ smart-home-server
 
 [Mi Home Device Protocal Documentaion](https://iot.mi.com/new/doc/design/spec/overall) 将会提供帮助。
 
-我将会在之后给米家c++协议实现（及说明）发布一个新的仓库
+前往 [miio-cpp](https://github.com/frc123/miio-cpp) 了解更多关于米家c++协议的细节。
 
 ## 使用的库
 

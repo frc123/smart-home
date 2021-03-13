@@ -116,7 +116,7 @@ For more Mi Home device, you may develop them based on smart-home-server/mi-home
 
 You may treat smart-home-server as a core of furniture to develop (at least I do so).
 
-I will make a new repository for mi home c++ protocol with a guide/documentation later.
+Go to [miio-cpp](https://github.com/frc123/miio-cpp) learn more detail about mi home c++ protocol
 
 ## Library
 
