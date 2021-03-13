@@ -1,5 +1,7 @@
 # Smart Home
 
+[Chinese Version 中文版](https://github.com/frc123/smart-home/README.zh-CN.md)
+
 This is my smart home solution. 
 
 The server is deployed on openwrt router.
@@ -91,11 +93,12 @@ Maybe you want to use linux screen
 
 ### Security
 
-Security policy relies on firewall of the router
+Security policy relies on firewall of the router.
+Plan to release the account system in the next version.
 
 ## Code Structure
 
-- fronr-end
+- front-end
 	Front End
 - smart-home-server
 	Back End
@@ -121,6 +124,7 @@ I will make a new repository for mi home c++ protocol with a guide/documentation
 - [jquery](https://jquery.com/)
 
 ## Statement
+
 We do not assume any responsibility
 
 ## Contact
