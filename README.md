@@ -120,7 +120,7 @@ Go to [miio-cpp](https://github.com/frc123/miio-cpp) learn more detail about mi 
 
 ## Library
 
-- [Tencent/rapidjson](https://www.runoob.com)
+- [Tencent/rapidjson](https://github.com/Tencent/rapidjson)
 - [EZLippi/Tinyhttpd](https://github.com/EZLippi/Tinyhttpd)
 - [JieweiWei/md5](https://github.com/JieweiWei/md5)
 - [kokke/tiny-AES-c](https://github.com/kokke/tiny-AES-c)
