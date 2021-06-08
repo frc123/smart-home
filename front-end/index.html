@@ -68,6 +68,21 @@
 			开门
 			</button>
           </div>
+		  <div class="am-g am-margin-top">
+			<div class="am-u-sm-4 am-u-md-2 am-text-right">控制方式</div>
+			<div class="am-u-sm-8 am-u-md-10">
+			  <div class="am-btn-group" data-am-button>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="door-control-mode-3"
+				  sha-device="1" sha-action="2" sha-value1="3" sha-value2="1">
+				  <input type="radio"> 在线
+				</label>
+				<label class="am-btn am-btn-default am-btn-xs sha-call sha-valuefromattr" id="door-control-mode-1"
+				  sha-device="1" sha-action="2" sha-value1="1" sha-value2="1">
+				  <input type="radio"> 常开
+				</label>
+			  </div>
+			</div>
+		  </div>
 		  <br><br><br><br><br><br><br><br><br><br><br>
         </div>
 
@@ -314,6 +329,40 @@ function alertInsert(status, text)
 		+ "<button type=\"button\" class=\"am-close\">&times;</button><p>" + text
 		+ "</p></div>");
 }
+//var parsedJsonDoorGetDoorControlParaResult;
+function doorGetDoorControlPara()
+{
+	var progress = $.AMUI.progress;
+	progress.start();
+	$.ajax({
+		url:"./smart-home-api.php",
+		type:"GET",
+		data:
+		{
+			device:"1",
+			action:"3"
+		},
+		success: function (data,status)
+		{
+			var ret_json = $.parseJSON(data);
+			if(ret_json.code != 0)
+			{
+				alertInsert("warning", "door control para retrieval failed "
+					+ "(code: " + ret_json.code + ")");
+			}
+			var ret_json_res = ret_json.result;
+			//parsedJsonDoorGetDoorControlParaResult = ret_json_res;
+			$("#door-control-mode-" + ret_json_res.mode).addClass("am-active");
+			progress.done();
+		},
+		error: function (XMLHttpRequest, textStatus, errorThrown)
+		{
+			alertInsert("warning", "door control para retrieval failed "
+				+ "(httpErrorThrown: " + errorThrown + ")");
+			progress.done();
+		}
+	});
+}
 var parsedJsonAirconditionGetAllPropertiesResult;
 function airconditionGetAllProperties()
 {
@@ -440,6 +489,7 @@ $(".sha-call.sha-valuefromspecial.sha-callfromfocusout").focusout(function(){
 	});
 });
 $(document).ready(function(){
+	doorGetDoorControlPara();
 	airconditionGetAllProperties();
 });
 
